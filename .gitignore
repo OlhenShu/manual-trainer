@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.pnpm-store/
+apps/api/.env
+apps/api/src/generated/
+apps/web/dist/
+*.log
+.DS_Store
+api-err.txt
+api-out.txt
+install_stderr.txt
+install_stdout.txt

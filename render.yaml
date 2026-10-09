@@ -1,0 +1,53 @@
+# Render Blueprint. Secrets stay in the Render dashboard; this file only names them.
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: manual-trainer
+    runtime: node
+    plan: free
+    buildCommand: corepack enable && corepack prepare pnpm@12.8.1 --activate && NODE_ENV=development pnpm install --frozen-lockfile && pnpm build
+    startCommand: corepack enable && corepack prepare pnpm@12.8.1 --activate && pnpm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.22.0
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: BCRYPT_ROUNDS
+        value: "12"
+      - key: REVIEW_PROVIDER
+        value: anthropic
+      - key: ANTHROPIC_MODEL
+        value: claude-haiku-5-5
+      - key: REVIEW_DAILY_LIMIT
+        value: "20"
+      - key: DATABASE_URL
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: ANTHROPIC_WORKSPACE_ID
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_SECURE
+        value: "false"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: MAIL_FROM
+        sync: false
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

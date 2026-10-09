@@ -1,0 +1,321 @@
+{
+  "pbtResults": {
+    "2.4 Write property tests for shared Zod schemas": {
+      "status": "passed",
+      "lastRunTimestamp": 1790973603775
+    }
+  },
+  "executionHistory": {
+    "1.1 Initialise pnpm workspace root": [
+      {
+        "executionId": "79fb80cc-7459-46b2-9c64-34cbc2ef3d1e",
+        "chatSessionId": "sess_6792f3e4-d616-4d68-b343-3daa819140d6",
+        "timestamp": 1790969760966
+      },
+      {
+        "executionId": "79fb80cc-7459-46b2-9c64-34cbc2ef3d1e",
+        "chatSessionId": "sess_6792f3e4-d616-4d68-b343-3daa819140d6",
+        "timestamp": 1790969968902
+      }
+    ],
+    "1.2 Create `docker-compose.yml` with two PostgreSQL services": [
+      {
+        "executionId": "6e8abaa3-adab-4849-b786-1004823dee4a",
+        "chatSessionId": "sess_8fbaff29-a93d-4af9-869e-34c08f4eb725",
+        "timestamp": 1790970972271
+      },
+      {
+        "executionId": "6e8abaa3-adab-4849-b786-1004823dee4a",
+        "chatSessionId": "sess_8fbaff29-a93d-4af9-869e-34c08f4eb725",
+        "timestamp": 1790970991077
+      }
+    ],
+    "1. Scaffold monorepo and shared tooling": [
+      {
+        "executionId": "6e8abaa3-adab-4849-b786-1004823dee4a",
+        "chatSessionId": "sess_8fbaff29-a93d-4af9-869e-34c08f4eb725",
+        "timestamp": 1790970991262
+      }
+    ],
+    "2.1 Initialise `packages/shared` package": [
+      {
+        "executionId": "1ebd6557-3d09-4f85-959c-d85c32308faf",
+        "chatSessionId": "sess_abc5c200-8cf7-4ff8-b312-4ab5c81096f2",
+        "timestamp": 1790971133624
+      },
+      {
+        "executionId": "1ebd6557-3d09-4f85-959c-d85c32308faf",
+        "chatSessionId": "sess_abc5c200-8cf7-4ff8-b312-4ab5c81096f2",
+        "timestamp": 1790971349114
+      }
+    ],
+    "2.2 Implement shared constants": [
+      {
+        "executionId": "d3aa05aa-2e79-4eac-8412-cb85144927e1",
+        "chatSessionId": "sess_cb337a71-adbd-45c9-9a0a-dcbdb59bbdb0",
+        "timestamp": 1790971410811
+      },
+      {
+        "executionId": "d3aa05aa-2e79-4eac-8412-cb85144927e1",
+        "chatSessionId": "sess_cb337a71-adbd-45c9-9a0a-dcbdb59bbdb0",
+        "timestamp": 1790971448956
+      }
+    ],
+    "2.3 Implement shared Zod schemas (Zod v4)": [
+      {
+        "executionId": "5b941a5f-7b18-4572-b1a8-6456109a8fde",
+        "chatSessionId": "sess_f6c5af6b-b2d6-448d-b0d1-7f607fd63695",
+        "timestamp": 1790971505986
+      },
+      {
+        "executionId": "5b941a5f-7b18-4572-b1a8-6456109a8fde",
+        "chatSessionId": "sess_f6c5af6b-b2d6-448d-b0d1-7f607fd63695",
+        "timestamp": 1790972912638
+      }
+    ],
+    "2.4 Write property tests for shared Zod schemas": [
+      {
+        "executionId": "07f91392-3271-4f59-b905-acc2c532f65a",
+        "chatSessionId": "sess_29fd54a7-beda-4578-9dcc-ff3e05aecaff",
+        "timestamp": 1790973171033
+      },
+      {
+        "executionId": "07f91392-3271-4f59-b905-acc2c532f65a",
+        "chatSessionId": "sess_29fd54a7-beda-4578-9dcc-ff3e05aecaff",
+        "timestamp": 1790973614435
+      }
+    ],
+    "2. Build `packages/shared` — Zod schemas, types, and constants": [
+      {
+        "executionId": "07f91392-3271-4f59-b905-acc2c532f65a",
+        "chatSessionId": "sess_29fd54a7-beda-4578-9dcc-ff3e05aecaff",
+        "timestamp": 1790973614536
+      }
+    ],
+    "3.1 Initialise `apps/api` package": [
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1790973702231
+      },
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791045741511
+      }
+    ],
+    "3.1.5 Create root `vitest.config.ts` with three projects": [
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791045744532
+      },
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791045780225
+      }
+    ],
+    "3.2 Set up Prisma schema and config": [
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791045783140
+      },
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791046185239
+      }
+    ],
+    "3.3 Implement `apps/api/src/db.ts` — Prisma client singleton": [
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791046188706
+      },
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791046248538
+      }
+    ],
+    "3.4 Implement `apps/api/src/config.ts` — typed env config": [
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791046191670
+      },
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791046248921
+      }
+    ],
+    "3. Set up `apps/api` package skeleton": [
+      {
+        "executionId": "12c6b136-7250-4e5b-9319-270d7b8faf9c",
+        "chatSessionId": "sess_d1339f86-a61f-422e-8cec-534d8808808b",
+        "timestamp": 1791046249259
+      }
+    ],
+    "4.1 Implement `apps/api/src/services/auth.ts`": [
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791046311890
+      },
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791046356167
+      }
+    ],
+    "4.2 Write unit tests for auth service functions": [
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791046359165
+      },
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791046794817
+      }
+    ],
+    "4.3 Implement Express middleware: `requireAuth`, `requireAdmin`, `errorHandler`, `rateLimiter`, and `asyncHandler`": [
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791046361955
+      },
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791046797804
+      }
+    ],
+    "4.4 Implement `apps/api/src/app.ts` — Express app factory": [
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791046800645
+      },
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791046942627
+      }
+    ],
+    "4.5 Implement auth routes (`apps/api/src/routes/auth.ts`) and admin route (`apps/api/src/routes/admin.ts`)": [
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791046945411
+      },
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791047330493
+      }
+    ],
+    "4.6 Implement `apps/api/src/index.ts` — server entry point": [
+      {
+        "executionId": "acdc77b2-8d4e-41e5-a58d-2a6f7f0c2342",
+        "chatSessionId": "sess_13d4ef52-5377-49f7-8468-478c1cf09414",
+        "timestamp": 1791047333383
+      },
+      {
+        "executionId": "0f4f19c4-d30a-4409-b398-db0a738cf573",
+        "chatSessionId": "sess_c2c5ad89-5822-4ca9-aa8c-7f8b2779e32a",
+        "timestamp": 1791047485421
+      },
+      {
+        "executionId": "0f4f19c4-d30a-4409-b398-db0a738cf573",
+        "chatSessionId": "sess_c2c5ad89-5822-4ca9-aa8c-7f8b2779e32a",
+        "timestamp": 1791047516598
+      }
+    ],
+    "4. Implement `apps/api` auth service and middleware": [
+      {
+        "executionId": "0f4f19c4-d30a-4409-b398-db0a738cf573",
+        "chatSessionId": "sess_c2c5ad89-5822-4ca9-aa8c-7f8b2779e32a",
+        "timestamp": 1791047516684
+      }
+    ],
+    "5. Checkpoint — API starts and responds correctly": [
+      {
+        "executionId": "7353b207-e960-4053-9a74-1772feaa4c3b",
+        "chatSessionId": "sess_6bd19b8b-a779-497f-9891-cd1815f05743",
+        "timestamp": 1791047655278
+      },
+      {
+        "executionId": "787d0546-9ef3-4afb-9ee6-cc489071ce43",
+        "chatSessionId": "sess_69f468bd-6a41-4f0e-b7ed-f265573eb805",
+        "timestamp": 1791048832404
+      }
+    ],
+    "6. Checkpoint — API unit tests pass": [
+      {
+        "executionId": "2c294c46-621c-4c5f-9147-4f9d4ec91eff",
+        "chatSessionId": "sess_af42c8f1-ea2d-4061-beef-71c77f91ee9b",
+        "timestamp": 1791050117947
+      },
+      {
+        "executionId": "2c294c46-621c-4c5f-9147-4f9d4ec91eff",
+        "chatSessionId": "sess_af42c8f1-ea2d-4061-beef-71c77f91ee9b",
+        "timestamp": 1791050687219
+      }
+    ],
+    "7.1 Write integration tests for auth routes (Supertest)": [
+      {
+        "executionId": "edcdcdd1-0295-4b43-ad82-c5975b93c304",
+        "chatSessionId": "sess_13e597ae-4e69-4bb3-a624-1209d1837389",
+        "timestamp": 1791050892322
+      },
+      {
+        "executionId": "edcdcdd1-0295-4b43-ad82-c5975b93c304",
+        "chatSessionId": "sess_13e597ae-4e69-4bb3-a624-1209d1837389",
+        "timestamp": 1791051939401
+      }
+    ],
+    "7. API integration tests": [
+      {
+        "executionId": "edcdcdd1-0295-4b43-ad82-c5975b93c304",
+        "chatSessionId": "sess_13e597ae-4e69-4bb3-a624-1209d1837389",
+        "timestamp": 1791051939777
+      }
+    ],
+    "8.1 Implement `apps/api/scripts/seed.ts`": [
+      {
+        "executionId": "2121a8bf-6cb8-41ba-831b-895169fd3ca8",
+        "chatSessionId": "sess_c097c87e-2f85-40bc-adde-11b9373aa182",
+        "timestamp": 1791052059655
+      },
+      {
+        "executionId": "2121a8bf-6cb8-41ba-831b-895169fd3ca8",
+        "chatSessionId": "sess_c097c87e-2f85-40bc-adde-11b9373aa182",
+        "timestamp": 1791052109672
+      }
+    ],
+    "8.2 Write integration tests for admin seed script": [
+      {
+        "executionId": "6b3fe4f6-b4ca-422e-82a0-ece10bf940f5",
+        "chatSessionId": "sess_ed4a6da6-f7c5-47e3-b50f-8fca4df62869",
+        "timestamp": 1791052151942
+      },
+      {
+        "executionId": "6b3fe4f6-b4ca-422e-82a0-ece10bf940f5",
+        "chatSessionId": "sess_ed4a6da6-f7c5-47e3-b50f-8fca4df62869",
+        "timestamp": 1791052376125
+      }
+    ],
+    "8. Implement admin seed script": [
+      {
+        "executionId": "6b3fe4f6-b4ca-422e-82a0-ece10bf940f5",
+        "chatSessionId": "sess_ed4a6da6-f7c5-47e3-b50f-8fca4df62869",
+        "timestamp": 1791052376566
+      }
+    ]
+  }
+}

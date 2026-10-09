@@ -1,0 +1,1 @@
+ALTER TABLE "users" ADD COLUMN "reviewCredits" INTEGER NOT NULL DEFAULT 0;

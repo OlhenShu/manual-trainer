@@ -1,0 +1,28 @@
+{
+  "name": "manual-trainer",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@12.8.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "docker compose up -d && concurrently --kill-others-on-fail \"pnpm --filter @manual-trainer/api dev\" \"pnpm --filter @manual-trainer/web dev\"",
+    "test": "node scripts/test.mjs",
+    "test:e2e": "pnpm --filter @manual-trainer/e2e test",
+    "typecheck": "tsc --noEmit -p tsconfig.base.json && pnpm -r typecheck",
+    "lint": "eslint .",
+    "build": "pnpm --filter @manual-trainer/api exec prisma generate && pnpm --filter @manual-trainer/api build && pnpm --filter @manual-trainer/web build",
+    "start": "pnpm --filter @manual-trainer/api exec prisma migrate deploy && pnpm --filter @manual-trainer/api exec tsx scripts/bootstrap.ts && pnpm --filter @manual-trainer/api start"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "concurrently": "10.0.5",
+    "dotenv": "18.0.5",
+    "eslint": "10.11.0",
+    "prettier": "3.9.9",
+    "typescript": "7.0.2",
+    "typescript-eslint": "8.71.0",
+    "vitest": "5.0.3"
+  }
+}

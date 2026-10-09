@@ -1,0 +1,128 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  user
+  admin
+}
+
+enum TaskType {
+  test_case
+  bug_report
+  requirements_analysis
+  requirements_composition
+}
+
+enum ScenarioMode {
+  fix
+  create
+}
+
+enum Difficulty {
+  easy
+  medium
+  hard
+}
+
+enum ScenarioStatus {
+  draft
+  published
+}
+
+enum ReviewStatus {
+  pending
+  completed
+  failed
+}
+
+model User {
+  id                String                   @id @default(uuid()) @db.Uuid
+  email             String                   @unique
+  passwordHash      String?
+  role              Role                     @default(user)
+  emailVerifiedAt   DateTime?                @db.Timestamptz
+  reviewCredits     Int                      @default(0)
+  createdAt         DateTime                 @default(now()) @db.Timestamptz
+  attempts          Attempt[]
+  aiCalls           AiCallLog[]
+  verificationTokens EmailVerificationToken[]
+
+  @@map("users")
+}
+
+model EmailVerificationToken {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @db.Uuid
+  tokenHash String   @unique
+  expiresAt DateTime @db.Timestamptz
+  createdAt DateTime @default(now()) @db.Timestamptz
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("email_verification_tokens")
+}
+
+model Scenario {
+  id               String         @id @default(uuid()) @db.Uuid
+  slug             String         @unique
+  title            String
+  summary          String
+  taskType         TaskType
+  mode             ScenarioMode
+  difficulty       Difficulty
+  status           ScenarioStatus @default(draft)
+  prompt           String
+  passingThreshold  Int            @default(70)
+  referenceSolution String         @default("")
+  rubric            Json           @default("{\"criteria\":[]}")
+  embeddedDefects   Json           @default("[]")
+  createdAt         DateTime       @default(now()) @db.Timestamptz
+  updatedAt        DateTime       @updatedAt @db.Timestamptz
+  attempts         Attempt[]
+
+  @@index([status, taskType, mode, difficulty])
+  @@map("scenarios")
+}
+
+model Attempt {
+  id         String   @id @default(uuid()) @db.Uuid
+  userId     String   @db.Uuid
+  scenarioId String   @db.Uuid
+  answer       Json
+  reviewStatus ReviewStatus @default(pending)
+  review       Json?
+  reviewedAt   DateTime?    @db.Timestamptz
+  createdAt    DateTime     @default(now()) @db.Timestamptz
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scenario     Scenario     @relation(fields: [scenarioId], references: [id], onDelete: Cascade)
+  aiCalls      AiCallLog[]
+
+  @@index([userId, scenarioId, createdAt])
+  @@index([userId, reviewStatus, reviewedAt])
+  @@map("attempts")
+}
+
+model AiCallLog {
+  id               String   @id @default(uuid()) @db.Uuid
+  attemptId        String   @db.Uuid
+  userId           String   @db.Uuid
+  provider         String
+  model            String
+  promptTokens     Int
+  completionTokens Int
+  costUsd          Float
+  durationMs       Int
+  succeeded        Boolean
+  createdAt        DateTime @default(now()) @db.Timestamptz
+  attempt          Attempt  @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([attemptId])
+  @@map("ai_call_logs")
+}

@@ -1,0 +1,69 @@
+{
+  "title": "Ваша відповідь",
+  "description": "Заповніть поля і надішліть спробу. Відповідь буде перевірено за рубрикою.",
+  "saved": "Відповідь збережено.",
+  "passed": "Зараховано",
+  "notPassed": "Потрібно доопрацювати",
+  "score": "{{score}} із {{max}} ({{percent}}%)",
+  "criterionScore": "{{score}} із {{max}}",
+  "feedback": "Коментар",
+  "reviewFailed": "Не вдалося перевірити відповідь. Спробу збережено, перевірку можна повторити.",
+  "reviewPending": "Перевірка ще не завершена.",
+  "reviewRetry": "Повторити перевірку",
+  "referenceTitle": "Еталонне рішення",
+  "referenceLocked": "Еталонне рішення відкриється після зарахованої спроби або після трьох незарахованих.",
+  "submit": "Надіслати відповідь",
+  "submitting": "Надсилаємо…",
+  "attemptsTitle": "Ваші спроби",
+  "attemptWhen": "Спроба від {{when}}",
+  "attemptsEmpty": "Ви ще не надсилали відповідь на цей сценарій.",
+  "attemptsLoading": "Завантажуємо ваші спроби…",
+  "attemptsError": "Не вдалося завантажити спроби.",
+  "retry": "Спробувати ще раз",
+  "attemptWhen": "Спроба від {{when}}",
+  "addItem": "Додати пункт",
+  "removeItem": "Прибрати пункт",
+  "testCase": {
+    "name": "Назва",
+    "preconditions": "Передумови",
+    "steps": "Кроки",
+    "expectedResult": "Очікуваний результат",
+    "priority": "Пріоритет"
+  },
+  "bugReport": {
+    "summary": "Підсумок",
+    "environment": "Середовище",
+    "steps": "Кроки відтворення",
+    "actualResult": "Фактичний результат",
+    "expectedResult": "Очікуваний результат",
+    "severity": "Серйозність",
+    "priority": "Пріоритет"
+  },
+  "analysis": {
+    "issues": "Знайдені проблеми",
+    "issueType": "Тип проблеми",
+    "fragment": "Фрагмент вимоги",
+    "description": "У чому проблема",
+    "add": "Додати проблему"
+  },
+  "composition": {
+    "userStory": "User story",
+    "acceptanceCriteria": "Критерії приймання"
+  },
+  "priority": {
+    "low": "Низький",
+    "medium": "Середній",
+    "high": "Високий"
+  },
+  "severity": {
+    "minor": "Незначна",
+    "major": "Значна",
+    "critical": "Критична",
+    "blocker": "Блокувальна"
+  },
+  "issueType": {
+    "contradiction": "Суперечність",
+    "ambiguity": "Двозначність",
+    "gap": "Прогалина"
+  }
+}
