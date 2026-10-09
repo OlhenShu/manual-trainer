@@ -1,7 +1,7 @@
 import { z } from 'zod';
-import { VALIDATION_KEY } from '../constants/validationKeys';
-import { difficultyValues, scenarioModeValues, taskTypeValues } from '../constants/scenario';
-import { rubricSchema } from './review';
+import { VALIDATION_KEY } from '../constants/validationKeys.js';
+import { difficultyValues, scenarioModeValues, taskTypeValues } from '../constants/scenario.js';
+import { rubricSchema } from './review.js';
 
 const requiredText = z
   .string()

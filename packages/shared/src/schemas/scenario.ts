@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { difficultyValues, scenarioModeValues, taskTypeValues } from '../constants/scenario';
+import { difficultyValues, scenarioModeValues, taskTypeValues } from '../constants/scenario.js';
 
 export const taskTypeSchema = z.enum(taskTypeValues);
 export const scenarioModeSchema = z.enum(scenarioModeValues);

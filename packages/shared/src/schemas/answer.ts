@@ -1,8 +1,8 @@
 import { z } from 'zod';
-import { VALIDATION_KEY } from '../constants/validationKeys';
-import { issueTypeValues, priorityValues, severityValues } from '../constants/answer';
-import { TASK_TYPE } from '../constants/scenario';
-import { reviewResultSchema, reviewStatusSchema } from './review';
+import { VALIDATION_KEY } from '../constants/validationKeys.js';
+import { issueTypeValues, priorityValues, severityValues } from '../constants/answer.js';
+import { TASK_TYPE } from '../constants/scenario.js';
+import { reviewResultSchema, reviewStatusSchema } from './review.js';
 
 const requiredText = z
   .string()
