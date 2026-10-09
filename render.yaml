@@ -5,8 +5,10 @@ services:
     name: manual-trainer
     runtime: node
     plan: free
-    buildCommand: corepack enable && corepack prepare pnpm@12.8.1 --activate && NODE_ENV=development pnpm install --frozen-lockfile && pnpm build
-    startCommand: corepack enable && corepack prepare pnpm@12.8.1 --activate && pnpm start
+    # Node 22's Corepack looks for bin/pnpm.cjs, which pnpm 12 no longer ships.
+    # Install pnpm with npm so its installer can fetch the real binary.
+    buildCommand: npm install --prefix .render-tools pnpm@12.8.1 && export PATH="$PWD/.render-tools/node_modules/.bin:$PATH" && NODE_ENV=development pnpm install --frozen-lockfile && pnpm build
+    startCommand: export PATH="$PWD/.render-tools/node_modules/.bin:$PATH" && pnpm start
     healthCheckPath: /api/health
     envVars:
       - key: NODE_VERSION

@@ -1,4 +1,5 @@
 node_modules/
+.render-tools/
 dist/
 .pnpm-store/
 apps/api/.env
